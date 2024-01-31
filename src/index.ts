@@ -3,6 +3,7 @@ import { serveStatic } from 'hono/cloudflare-workers'
 const app = new Hono()
 
 app.get('/', c => c.text('Hello Cloudflare Workers!'))
+app.get('/hello', c => c.text('Hello World!'))
 
 app.get('/static/*', serveStatic({ root: './' }))
 app.get('/favicon.ico', serveStatic({ path: './favicon.ico' }))
