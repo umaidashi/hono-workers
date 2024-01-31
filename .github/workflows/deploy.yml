@@ -21,5 +21,6 @@ jobs:
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
+        run: bun run deploy
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
